@@ -3,79 +3,178 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abhinav Chandra | Data Analyst</title>
+  <title>Abhinav Chandra | Data Analyst Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin:0; font-family: 'Segoe UI', sans-serif; background:#0f172a; color:#e2e8f0; }
-    header { text-align:center; padding:60px 20px; }
-    header h1 { font-size:2.5rem; margin:0; }
-    header p { color:#94a3b8; }
-    nav { text-align:center; margin-bottom:20px; }
-    nav a { color:#e2e8f0; margin:0 15px; text-decoration:none; }
-    section { max-width:900px; margin:auto; padding:40px 20px; }
-    .card { background:#1e293b; padding:20px; border-radius:12px; margin-bottom:20px; }
-    .card h3 { margin-top:0; }
-    .btn { display:inline-block; margin-top:10px; padding:8px 12px; background:#38bdf8; color:#0f172a; text-decoration:none; border-radius:6px; }
-    footer { text-align:center; padding:20px; color:#94a3b8; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Inter', sans-serif; background:#0f172a; color:#e2e8f0; line-height:1.6; }
+
+    header {
+      text-align:center;
+      padding:80px 20px;
+      background:linear-gradient(135deg,#0f172a,#1e293b);
+    }
+    header h1 { font-size:3rem; font-weight:700; }
+    header p { color:#94a3b8; margin-top:10px; font-size:1.1rem; }
+
+    nav {
+      position:sticky;
+      top:0;
+      background:#020617;
+      padding:15px;
+      text-align:center;
+      z-index:1000;
+    }
+    nav a {
+      color:#e2e8f0;
+      margin:0 15px;
+      text-decoration:none;
+      font-weight:500;
+      transition:0.3s;
+    }
+    nav a:hover { color:#38bdf8; }
+
+    section {
+      max-width:1000px;
+      margin:auto;
+      padding:60px 20px;
+    }
+
+    h2 { margin-bottom:20px; font-size:2rem; }
+
+    .about p { max-width:700px; }
+
+    .skills {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:20px;
+    }
+    .skill {
+      background:#1e293b;
+      padding:8px 12px;
+      border-radius:20px;
+      font-size:0.9rem;
+    }
+
+    .projects {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
+    }
+
+    .card {
+      background:#1e293b;
+      padding:20px;
+      border-radius:16px;
+      transition:0.3s;
+      box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    }
+    .card:hover {
+      transform:translateY(-5px);
+      box-shadow:0 15px 35px rgba(0,0,0,0.4);
+    }
+
+    .card h3 { margin-bottom:10px; }
+    .card p { font-size:0.95rem; color:#cbd5f5; }
+
+    .btn {
+      display:inline-block;
+      margin-top:15px;
+      padding:10px 14px;
+      background:#38bdf8;
+      color:#020617;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:600;
+      transition:0.3s;
+    }
+    .btn:hover { background:#0ea5e9; }
+
+    .contact a { color:#38bdf8; text-decoration:none; }
+
+    footer {
+      text-align:center;
+      padding:30px;
+      color:#94a3b8;
+      border-top:1px solid #1e293b;
+    }
   </style>
 </head>
 <body>
 
 <header>
   <h1>Abhinav Chandra</h1>
-  <p>Data Analyst | SQL | Python | Power BI</p>
+  <p>Data Analyst | SQL | Python | Power BI | Business Insights</p>
 </header>
 
 <nav>
   <a href="#about">About</a>
+  <a href="#skills">Skills</a>
   <a href="#projects">Projects</a>
   <a href="#contact">Contact</a>
 </nav>
 
-<section id="about">
+<section id="about" class="about">
   <h2>About Me</h2>
   <p>
-    Data Analyst skilled in SQL, Python, and Power BI. I specialize in data cleaning, visualization, and deriving insights that drive business decisions.
+    Results-driven Data Analyst with 6+ years of experience in data analysis and business operations. Skilled in SQL, Python, and Power BI, I specialize in transforming raw data into actionable insights that drive business growth, optimize performance, and improve decision-making.
   </p>
+</section>
+
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <div class="skill">SQL</div>
+    <div class="skill">Python</div>
+    <div class="skill">Power BI</div>
+    <div class="skill">Excel</div>
+    <div class="skill">Data Visualization</div>
+    <div class="skill">A/B Testing</div>
+    <div class="skill">Forecasting</div>
+  </div>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
+  <div class="projects">
 
-  <div class="card">
-    <h3>Sales Dashboard</h3>
-    <p><b>Tools:</b> Power BI</p>
-    <p>Built dashboard tracking KPIs like revenue and profit.</p>
-    <p><b>Impact:</b> Reduced manual reporting effort by 40%</p>
-    <a class="btn" href="#">View Project</a>
+    <div class="card">
+      <h3>Sales Performance Dashboard</h3>
+      <p><b>Tools:</b> Power BI</p>
+      <p>Developed an interactive dashboard to monitor KPIs including revenue, profit margins, and regional performance.</p>
+      <p><b>Impact:</b> Reduced manual reporting effort by 40% and improved decision-making speed.</p>
+      <a class="btn" href="#">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>Customer Churn Analysis</h3>
+      <p><b>Tools:</b> Python, SQL</p>
+      <p>Analyzed customer behavior and identified churn drivers using statistical techniques and exploratory data analysis.</p>
+      <p><b>Impact:</b> Enabled targeted retention strategies improving customer engagement.</p>
+      <a class="btn" href="#">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>SQL Data Exploration Project</h3>
+      <p><b>Tools:</b> MySQL</p>
+      <p>Performed advanced querying using joins, CTEs, and window functions to extract business insights.</p>
+      <p><b>Impact:</b> Improved query efficiency and data accessibility.</p>
+      <a class="btn" href="#">View Project</a>
+    </div>
+
   </div>
-
-  <div class="card">
-    <h3>Customer Churn Analysis</h3>
-    <p><b>Tools:</b> Python, SQL</p>
-    <p>Identified key factors contributing to customer churn.</p>
-    <p><b>Impact:</b> Helped improve retention strategy</p>
-    <a class="btn" href="#">View Project</a>
-  </div>
-
-  <div class="card">
-    <h3>SQL Data Exploration</h3>
-    <p><b>Tools:</b> MySQL</p>
-    <p>Performed analysis using joins and window functions.</p>
-    <p><b>Impact:</b> Improved query efficiency</p>
-    <a class="btn" href="#">View Project</a>
-  </div>
-
 </section>
 
-<section id="contact">
+<section id="contact" class="contact">
   <h2>Contact</h2>
   <p>Email: abhinavchandrakatha@example.com</p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/abhinav-chandra-189b35353">Profile</a></p>
-  <p>GitHub: <a href="https://github.com/AbhinavAnalyst">GitHub</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/abhinav-chandra-189b35353" target="_blank">View Profile</a></p>
+  <p>GitHub: <a href="#">View GitHub</a></p>
 </section>
 
 <footer>
-  <p>© 2026 Abhinav Chandra</p>
+  <p>© 2026 Abhinav Chandra | Built with HTML & CSS</p>
 </footer>
 
 </body>
