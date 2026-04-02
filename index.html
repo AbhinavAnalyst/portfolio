@@ -1,137 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abhinav Chandra | Data Analyst Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'Inter', sans-serif; background:#0f172a; color:#e2e8f0; line-height:1.6; }
-
-    header {
-      text-align:center;
-      padding:80px 20px;
-      background:linear-gradient(135deg,#0f172a,#1e293b);
-    }
-    header h1 { font-size:3rem; font-weight:700; }
-    header p { color:#94a3b8; margin-top:10px; font-size:1.1rem; }
-
-    nav {
-      position:sticky;
-      top:0;
-      background:#020617;
-      padding:15px;
-      text-align:center;
-      z-index:1000;
-    }
-    nav a {
-      color:#e2e8f0;
-      margin:0 15px;
-      text-decoration:none;
-      font-weight:500;
-      transition:0.3s;
-    }
-    nav a:hover { color:#38bdf8; }
-
-    section {
-      max-width:1000px;
-      margin:auto;
-      padding:60px 20px;
-    }
-
-    h2 { margin-bottom:20px; font-size:2rem; }
-
-    .about p { max-width:700px; }
-
-    .skills {
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:20px;
-    }
-    .skill {
-      background:#1e293b;
-      padding:8px 12px;
-      border-radius:20px;
-      font-size:0.9rem;
-    }
-
-    .projects {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:20px;
-    }
-
-    .card {
-      background:#1e293b;
-      padding:20px;
-      border-radius:16px;
-      transition:0.3s;
-      box-shadow:0 10px 25px rgba(0,0,0,0.2);
-    }
-    .card:hover {
-      transform:translateY(-5px);
-      box-shadow:0 15px 35px rgba(0,0,0,0.4);
-    }
-
-    .card h3 { margin-bottom:10px; }
-    .card p { font-size:0.95rem; color:#cbd5f5; }
-
-    .btn {
-      display:inline-block;
-      margin-top:15px;
-      padding:10px 14px;
-      background:#38bdf8;
-      color:#020617;
-      text-decoration:none;
-      border-radius:8px;
-      font-weight:600;
-      transition:0.3s;
-    }
-    .btn:hover { background:#0ea5e9; }
-
-    .contact a { color:#38bdf8; text-decoration:none; }
-
-    footer {
-      text-align:center;
-      padding:30px;
-      color:#94a3b8;
-      border-top:1px solid #1e293b;
-    }
-  </style>
-</head>
-<body>
+<!-- Only showing UPDATED sections for clarity -->
 
 <header>
   <h1>Abhinav Chandra</h1>
-  <p>Data Analyst | SQL | Python | Power BI | Business Insights</p>
+  <p>Senior Data Analyst | Data Governance | SQL | Python | Tableau | AWS</p>
+  <a class="btn" href="resume.pdf" download>Download Resume</a>
 </header>
-
-<nav>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</nav>
 
 <section id="about" class="about">
   <h2>About Me</h2>
   <p>
-    Results-driven Data Analyst with 6+ years of experience in data analysis and business operations. Skilled in SQL, Python, and Power BI, I specialize in transforming raw data into actionable insights that drive business growth, optimize performance, and improve decision-making.
+    Senior Data Analyst with 6+ years of experience specializing in data governance, data quality, and advanced analytics. 
+    Proven expertise in SQL, Python, Tableau, and AWS, with a strong focus on building scalable data pipelines, 
+    ensuring data integrity, and delivering actionable insights. Experienced in collaborating with cross-functional teams 
+    to implement data governance frameworks, optimize business performance, and drive data-driven decision-making.
   </p>
 </section>
 
 <section id="skills">
   <h2>Technical Skills</h2>
   <div class="skills">
-    <div class="skill">SQL</div>
-    <div class="skill">Python</div>
+
+    <div class="skill">SQL / PL-SQL</div>
+    <div class="skill">Python / R</div>
+    <div class="skill">Tableau</div>
     <div class="skill">Power BI</div>
-    <div class="skill">Excel</div>
-    <div class="skill">Data Visualization</div>
-    <div class="skill">A/B Testing</div>
-    <div class="skill">Forecasting</div>
+
+    <div class="skill">AWS (S3, Glue, RDS, SageMaker)</div>
+    <div class="skill">Snowflake</div>
+    <div class="skill">Databricks</div>
+
+    <div class="skill">Data Governance</div>
+    <div class="skill">Collibra</div>
+    <div class="skill">RBAC & Data Security</div>
+
+    <div class="skill">ETL (Informatica, Talend)</div>
+    <div class="skill">Apache Airflow</div>
+    <div class="skill">Spark / Hadoop</div>
+
+    <div class="skill">Machine Learning</div>
+    <div class="skill">NLP</div>
+    <div class="skill">Statistical Analysis</div>
+
   </div>
 </section>
 
@@ -140,42 +49,82 @@
   <div class="projects">
 
     <div class="card">
-      <h3>Sales Performance Dashboard</h3>
-      <p><b>Tools:</b> Power BI</p>
-      <p>Developed an interactive dashboard to monitor KPIs including revenue, profit margins, and regional performance.</p>
-      <p><b>Impact:</b> Reduced manual reporting effort by 40% and improved decision-making speed.</p>
+      <h3>Credit Risk Analytics Dashboard</h3>
+      <p><b>Tools:</b> Tableau, SQL, Python</p>
+      <p>
+        Built interactive dashboards analyzing credit portfolio performance with advanced statistical techniques 
+        and data quality validation.
+      </p>
+      <p><b>Impact:</b> Improved risk visibility and enabled faster decision-making for financial stakeholders.</p>
       <a class="btn" href="#">View Project</a>
     </div>
 
     <div class="card">
-      <h3>Customer Churn Analysis</h3>
-      <p><b>Tools:</b> Python, SQL</p>
-      <p>Analyzed customer behavior and identified churn drivers using statistical techniques and exploratory data analysis.</p>
-      <p><b>Impact:</b> Enabled targeted retention strategies improving customer engagement.</p>
+      <h3>Customer Behavior & Churn Analysis</h3>
+      <p><b>Tools:</b> Python, Pandas, SQL</p>
+      <p>
+        Performed exploratory data analysis and predictive modeling to identify churn drivers and customer segments.
+      </p>
+      <p><b>Impact:</b> Supported targeted retention strategies and improved engagement metrics.</p>
       <a class="btn" href="#">View Project</a>
     </div>
 
     <div class="card">
-      <h3>SQL Data Exploration Project</h3>
-      <p><b>Tools:</b> MySQL</p>
-      <p>Performed advanced querying using joins, CTEs, and window functions to extract business insights.</p>
-      <p><b>Impact:</b> Improved query efficiency and data accessibility.</p>
+      <h3>Enterprise Data Governance Framework</h3>
+      <p><b>Tools:</b> Collibra, SQL, AWS</p>
+      <p>
+        Implemented data classification, metadata management, and data quality validation processes across enterprise datasets.
+      </p>
+      <p><b>Impact:</b> Ensured compliance, improved data trust, and strengthened governance policies.</p>
+      <a class="btn" href="#">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>ETL Pipeline & Data Engineering Project</h3>
+      <p><b>Tools:</b> AWS Glue, Airflow, Snowflake</p>
+      <p>
+        Designed and automated scalable ETL pipelines integrating data from multiple sources into cloud data warehouses.
+      </p>
+      <p><b>Impact:</b> Reduced manual effort and improved data availability for analytics teams.</p>
       <a class="btn" href="#">View Project</a>
     </div>
 
   </div>
 </section>
 
+<section id="certifications">
+  <h2>Certifications</h2>
+  <div class="certifications">
+    <div class="cert-card">
+      <p><b>Microsoft Power BI Certification</b></p>
+      <a href="#" target="_blank">View Certificate</a>
+    </div>
+    <div class="cert-card">
+      <p><b>AWS Data Analytics / Cloud Certification</b></p>
+      <a href="#" target="_blank">View Certificate</a>
+    </div>
+    <div class="cert-card">
+      <p><b>Python for Data Science</b></p>
+      <a href="#" target="_blank">View Certificate</a>
+    </div>
+  </div>
+</section>
+
 <section id="contact" class="contact">
   <h2>Contact</h2>
   <p>Email: abhinavchandrakatha@example.com</p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/abhinav-chandra-189b35353" target="_blank">View Profile</a></p>
-  <p>GitHub: <a href="#">View GitHub</a></p>
+  <p>LinkedIn: 
+    <a href="https://www.linkedin.com/in/abhinav-chandra-189b35353" target="_blank">
+      View Profile
+    </a>
+  </p>
+  <p>GitHub: 
+    <a href="https://github.com/yourusername" target="_blank">
+      View GitHub
+    </a>
+  </p>
 </section>
 
 <footer>
-  <p>© 2026 Abhinav Chandra | Built with HTML & CSS</p>
+  <p>© 2026 Abhinav Chandra | Senior Data Analyst Portfolio</p>
 </footer>
-
-</body>
-</html>
