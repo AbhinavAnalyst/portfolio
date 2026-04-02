@@ -1,130 +1,176 @@
-<!-- Only showing UPDATED sections for clarity -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhinav Chandra | Data Analyst Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Inter', sans-serif; background:#0f172a; color:#e2e8f0; line-height:1.6; }
+
+    header { text-align:center; padding:100px 20px; background:linear-gradient(135deg,#0f172a,#1e293b); }
+    header h1 { font-size:3rem; }
+    header p { color:#94a3b8; margin-top:10px; }
+
+    nav { position:sticky; top:0; background:#020617; padding:15px; text-align:center; }
+    nav a { color:#e2e8f0; margin:0 15px; text-decoration:none; }
+    nav a:hover { color:#38bdf8; }
+
+    section { max-width:1100px; margin:auto; padding:70px 20px; }
+    h2 { text-align:center; margin-bottom:30px; color:#38bdf8; }
+
+    .card {
+      background:#1e293b;
+      padding:20px;
+      border-radius:15px;
+      margin-bottom:20px;
+    }
+
+    .skills { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+    .skill { background:#38bdf8; color:#000; padding:8px 14px; border-radius:20px; }
+
+    footer { text-align:center; padding:30px; color:#94a3b8; }
+  </style>
+</head>
+
+<body>
 
 <header>
   <h1>Abhinav Chandra</h1>
   <p>Senior Data Analyst | Data Governance | SQL | Python | Tableau | AWS</p>
-  <a class="btn" href="resume.pdf" download>Download Resume</a>
 </header>
 
-<section id="about" class="about">
-  <h2>About Me</h2>
-  <p>
-    Senior Data Analyst with 6+ years of experience specializing in data governance, data quality, and advanced analytics. 
-    Proven expertise in SQL, Python, Tableau, and AWS, with a strong focus on building scalable data pipelines, 
-    ensuring data integrity, and delivering actionable insights. Experienced in collaborating with cross-functional teams 
-    to implement data governance frameworks, optimize business performance, and drive data-driven decision-making.
-  </p>
+<nav>
+  <a href="#summary">Summary</a>
+  <a href="#experience">Experience</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- PROFESSIONAL SUMMARY -->
+<section id="summary">
+  <h2>Professional Summary</h2>
+  <div class="card">
+    <p>
+      Senior Data Analyst with 6+ years of experience in data governance, data quality, and advanced analytics. 
+      Expertise in SQL, Python, Tableau, and AWS with a strong focus on building scalable data pipelines, 
+      performing statistical analysis, and delivering actionable business insights. 
+      Proven ability to collaborate with stakeholders, implement data governance frameworks, 
+      and drive data-driven decision-making across enterprise environments.
+    </p>
+  </div>
 </section>
 
+<!-- WORK EXPERIENCE -->
+<section id="experience">
+  <h2>Work Experience</h2>
+
+  <div class="card">
+    <h3>KPMG – Senior Data Analyst</h3>
+    <p><i>Jan 2025 – Present | Austin, TX</i></p>
+    <ul>
+      <li>Performed credit risk analysis and data quality validation for financial datasets.</li>
+      <li>Developed Tableau dashboards to monitor portfolio performance and KPIs.</li>
+      <li>Wrote complex SQL queries (joins, CTEs) for data transformation and reporting.</li>
+      <li>Conducted statistical analysis (ANOVA, regression) using Python and R.</li>
+      <li>Built ETL pipelines using SSIS and automated workflows.</li>
+      <li>Improved inventory planning efficiency by 15% through analytical reporting.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Concentrix – Data Analyst</h3>
+    <p><i>Sep 2024 – Dec 2024 | GA</i></p>
+    <ul>
+      <li>Built real-time dashboards to analyze customer behavior and engagement.</li>
+      <li>Performed cohort analysis, segmentation, and A/B testing.</li>
+      <li>Worked on Snowflake + AWS integration for data pipelines.</li>
+      <li>Supported data governance initiatives including data classification and validation.</li>
+      <li>Used Spark and Hive for large-scale data analysis.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Amazon – Data Analyst</h3>
+    <p><i>July 2019 – July 2023 | India</i></p>
+    <ul>
+      <li>Analyzed user behavior to improve retention and product performance.</li>
+      <li>Developed dashboards and KPIs using Tableau.</li>
+      <li>Designed ETL pipelines using AWS Glue and Python.</li>
+      <li>Performed data validation, governance, and metadata documentation.</li>
+      <li>Optimized SQL queries for large-scale datasets.</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- SKILLS -->
 <section id="skills">
   <h2>Technical Skills</h2>
   <div class="skills">
-
-    <div class="skill">SQL / PL-SQL</div>
-    <div class="skill">Python / R</div>
+    <div class="skill">SQL</div>
+    <div class="skill">Python</div>
+    <div class="skill">R</div>
     <div class="skill">Tableau</div>
     <div class="skill">Power BI</div>
-
-    <div class="skill">AWS (S3, Glue, RDS, SageMaker)</div>
+    <div class="skill">AWS</div>
     <div class="skill">Snowflake</div>
     <div class="skill">Databricks</div>
-
+    <div class="skill">Airflow</div>
+    <div class="skill">Spark</div>
     <div class="skill">Data Governance</div>
     <div class="skill">Collibra</div>
-    <div class="skill">RBAC & Data Security</div>
-
-    <div class="skill">ETL (Informatica, Talend)</div>
-    <div class="skill">Apache Airflow</div>
-    <div class="skill">Spark / Hadoop</div>
-
-    <div class="skill">Machine Learning</div>
-    <div class="skill">NLP</div>
-    <div class="skill">Statistical Analysis</div>
-
   </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
   <h2>Projects</h2>
-  <div class="projects">
 
-    <div class="card">
-      <h3>Credit Risk Analytics Dashboard</h3>
-      <p><b>Tools:</b> Tableau, SQL, Python</p>
-      <p>
-        Built interactive dashboards analyzing credit portfolio performance with advanced statistical techniques 
-        and data quality validation.
-      </p>
-      <p><b>Impact:</b> Improved risk visibility and enabled faster decision-making for financial stakeholders.</p>
-      <a class="btn" href="#">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Customer Behavior & Churn Analysis</h3>
-      <p><b>Tools:</b> Python, Pandas, SQL</p>
-      <p>
-        Performed exploratory data analysis and predictive modeling to identify churn drivers and customer segments.
-      </p>
-      <p><b>Impact:</b> Supported targeted retention strategies and improved engagement metrics.</p>
-      <a class="btn" href="#">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Enterprise Data Governance Framework</h3>
-      <p><b>Tools:</b> Collibra, SQL, AWS</p>
-      <p>
-        Implemented data classification, metadata management, and data quality validation processes across enterprise datasets.
-      </p>
-      <p><b>Impact:</b> Ensured compliance, improved data trust, and strengthened governance policies.</p>
-      <a class="btn" href="#">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>ETL Pipeline & Data Engineering Project</h3>
-      <p><b>Tools:</b> AWS Glue, Airflow, Snowflake</p>
-      <p>
-        Designed and automated scalable ETL pipelines integrating data from multiple sources into cloud data warehouses.
-      </p>
-      <p><b>Impact:</b> Reduced manual effort and improved data availability for analytics teams.</p>
-      <a class="btn" href="#">View Project</a>
-    </div>
-
+  <div class="card">
+    <h3>Credit Risk Analytics Dashboard</h3>
+    <p>Built Tableau dashboards to analyze financial risk and KPIs.</p>
   </div>
+
+  <div class="card">
+    <h3>Customer Churn Analysis</h3>
+    <p>Used Python and SQL to identify churn patterns and improve retention.</p>
+  </div>
+
+  <div class="card">
+    <h3>ETL Pipeline Automation</h3>
+    <p>Developed AWS-based ETL pipelines for scalable data processing.</p>
+  </div>
+
 </section>
 
+<!-- CERTIFICATIONS -->
 <section id="certifications">
   <h2>Certifications</h2>
-  <div class="certifications">
-    <div class="cert-card">
-      <p><b>Microsoft Power BI Certification</b></p>
-      <a href="#" target="_blank">View Certificate</a>
-    </div>
-    <div class="cert-card">
-      <p><b>AWS Data Analytics / Cloud Certification</b></p>
-      <a href="#" target="_blank">View Certificate</a>
-    </div>
-    <div class="cert-card">
-      <p><b>Python for Data Science</b></p>
-      <a href="#" target="_blank">View Certificate</a>
-    </div>
+
+  <div class="card">
+    <ul>
+      <li>Microsoft Power BI Certification</li>
+      <li>Python for Data Science</li>
+      <li>AWS Data Analytics Certification</li>
+    </ul>
   </div>
 </section>
 
-<section id="contact" class="contact">
+<!-- CONTACT -->
+<section id="contact">
   <h2>Contact</h2>
   <p>Email: abhinavchandrakatha@example.com</p>
-  <p>LinkedIn: 
-    <a href="https://www.linkedin.com/in/abhinav-chandra-189b35353" target="_blank">
-      View Profile
-    </a>
-  </p>
-  <p>GitHub: 
-    <a href="https://github.com/yourusername" target="_blank">
-      View GitHub
-    </a>
-  </p>
+  <p>LinkedIn: https://www.linkedin.com/in/abhinav-chandra-189b35353</p>
 </section>
 
 <footer>
-  <p>© 2026 Abhinav Chandra | Senior Data Analyst Portfolio</p>
+  <p>© 2026 Abhinav Chandra</p>
 </footer>
+
+</body>
+</html>
