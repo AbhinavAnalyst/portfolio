@@ -1,176 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abhinav Chandra | Data Analyst Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhinav Chandra | Data Analyst</title>
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'Inter', sans-serif; background:#0f172a; color:#e2e8f0; line-height:1.6; }
-
-    header { text-align:center; padding:100px 20px; background:linear-gradient(135deg,#0f172a,#1e293b); }
-    header h1 { font-size:3rem; }
-    header p { color:#94a3b8; margin-top:10px; }
-
-    nav { position:sticky; top:0; background:#020617; padding:15px; text-align:center; }
-    nav a { color:#e2e8f0; margin:0 15px; text-decoration:none; }
-    nav a:hover { color:#38bdf8; }
-
-    section { max-width:1100px; margin:auto; padding:70px 20px; }
-    h2 { text-align:center; margin-bottom:30px; color:#38bdf8; }
-
-    .card {
-      background:#1e293b;
-      padding:20px;
-      border-radius:15px;
-      margin-bottom:20px;
+    :root {
+      --bg: #0b1020;
+      --panel: #121933;
+      --panel-2: #182247;
+      --text: #e8ecf8;
+      --muted: #aeb8d4;
+      --accent: #6ee7ff;
+      --accent-2: #c084fc;
+      --border: rgba(255,255,255,0.08);
+      --chip: rgba(255,255,255,0.06);
+      --shadow: 0 18px 40px rgba(0,0,0,0.28);
     }
 
-    .skills { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
-    .skill { background:#38bdf8; color:#000; padding:8px 14px; border-radius:20px; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(110,231,255,0.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(192,132,252,0.14), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
 
-    footer { text-align:center; padding:30px; color:#94a3b8; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    .hero {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      border-radius: 24px;
+      padding: 36px;
+      margin-bottom: 24px;
+    }
+
+    .top-links {
+      display: flex;
+      justify-content: flex-end;
+      gap: 18px;
+      font-size: 0.95rem;
+      margin-bottom: 22px;
+    }
+
+    .name {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      line-height: 1.05;
+      margin: 0;
+      letter-spacing: -0.03em;
+    }
+
+    .role {
+      margin: 8px 0 0;
+      color: var(--accent);
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+
+    .summary {
+      margin-top: 20px;
+      color: var(--muted);
+      max-width: 900px;
+      font-size: 1.02rem;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .chip {
+      background: var(--chip);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 8px 14px;
+      color: var(--text);
+      font-size: 0.94rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      border-radius: 22px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 1.15rem;
+      letter-spacing: 0.01em;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .section-list,
+    .bullets {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .section-list li,
+    .bullets li {
+      margin: 0 0 10px;
+      color: var(--muted);
+    }
+
+    .skill-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-cloud span {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: rgba(110,231,255,0.08);
+      border: 1px solid rgba(110,231,255,0.15);
+      color: var(--text);
+      font-size: 0.92rem;
+    }
+
+    .item {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .item-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .item-meta {
+      color: var(--muted);
+      font-size: 0.94rem;
+      white-space: nowrap;
+    }
+
+    .item-sub {
+      color: var(--accent-2);
+      font-size: 0.95rem;
+      margin-top: 3px;
+    }
+
+    .footer-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+      .item-head { flex-direction: column; }
+      .item-meta { white-space: normal; }
+      .top-links { justify-content: flex-start; flex-wrap: wrap; }
+      .hero { padding: 26px; }
+    }
   </style>
 </head>
-
 <body>
+  <div class="container">
+    <section class="hero">
+      <div class="top-links">
+        <a href="#">LinkedIn</a>
+        <a href="#">Website</a>
+      </div>
+      <h1 class="name">Abhinav Chandra</h1>
+      <p class="role">Data Analyst</p>
+      <p class="summary">
+        Analytical and detail-oriented Data Analyst with experience in data extraction, reporting,
+        statistical analysis, and dashboard development to support strategic business decision-making.
+        Proficient in SQL, Power BI, Tableau, ETL processes, and advanced data validation techniques,
+        with a strong ability to transform complex datasets into actionable insights.
+      </p>
+      <div class="contact">
+        <span class="chip">330-541-8464</span>
+        <span class="chip">abhinavchandrakatha@gmail.com</span>
+        <span class="chip">Dublin, OH</span>
+      </div>
+    </section>
 
-<header>
-  <h1>Abhinav Chandra</h1>
-  <p>Senior Data Analyst | Data Governance | SQL | Python | Tableau | AWS</p>
-</header>
+    <div class="grid">
+      <aside>
+        <section class="card">
+          <h2>Core Expertise</h2>
+          <div class="skill-cloud">
+            <span>Data Analysis & Reporting</span>
+            <span>Statistical Analysis</span>
+            <span>SQL Querying</span>
+            <span>ETL & Data Transformation</span>
+            <span>Dashboard Development</span>
+            <span>Data Visualization</span>
+            <span>Trend Analysis</span>
+            <span>Ad Hoc Reporting</span>
+            <span>Recurring Reporting</span>
+            <span>Data Validation</span>
+            <span>Documentation</span>
+            <span>Process Improvement</span>
+          </div>
+        </section>
 
-<nav>
-  <a href="#summary">Summary</a>
-  <a href="#experience">Experience</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#certifications">Certifications</a>
-  <a href="#contact">Contact</a>
-</nav>
+        <section class="card">
+          <h2>Technical Skills</h2>
+          <ul class="section-list">
+            <li>SQL: MySQL, Oracle, PostgreSQL</li>
+            <li>Power BI, Tableau</li>
+            <li>Python: Pandas, NumPy</li>
+            <li>R Programming</li>
+            <li>Excel: Pivot Tables, VLOOKUP</li>
+            <li>Jenkins, Amazon Redshift</li>
+            <li>ERP JD Edwards</li>
+            <li>Git Version Control</li>
+            <li>Regression Analysis, A/B Testing</li>
+          </ul>
+        </section>
 
-<!-- PROFESSIONAL SUMMARY -->
-<section id="summary">
-  <h2>Professional Summary</h2>
-  <div class="card">
-    <p>
-      Senior Data Analyst with 6+ years of experience in data governance, data quality, and advanced analytics. 
-      Expertise in SQL, Python, Tableau, and AWS with a strong focus on building scalable data pipelines, 
-      performing statistical analysis, and delivering actionable business insights. 
-      Proven ability to collaborate with stakeholders, implement data governance frameworks, 
-      and drive data-driven decision-making across enterprise environments.
-    </p>
+        <section class="card">
+          <h2>Education</h2>
+          <div class="item">
+            <h3>Master’s Degree | Business Analyst</h3>
+            <div class="item-sub">Kent State University, 3.7 CGPA</div>
+            <div class="item-meta">Aug 2023 – Dec 2024</div>
+          </div>
+          <div class="item">
+            <h3>Bachelor’s Degree | Mechanical Engineering</h3>
+            <div class="item-sub">CMR University, 3.5 CGPA</div>
+            <div class="item-meta">Jul 2015 – Apr 2019</div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Certificates</h2>
+          <ul class="section-list">
+            <li>Google Data Analytics Professional Certificate</li>
+            <li>SAS Programming</li>
+            <li>AWS Cloud Practitioner</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Soft Skills</h2>
+          <ul class="section-list">
+            <li>Communication</li>
+            <li>Public speaking and presentations</li>
+            <li>Adaptability and flexibility</li>
+            <li>Team collaboration</li>
+            <li>Fast-paced execution</li>
+            <li>Continuous learning</li>
+          </ul>
+        </section>
+      </aside>
+
+      <main>
+        <section class="card">
+          <h2>Professional Experience</h2>
+
+          <article class="item">
+            <div class="item-head">
+              <div>
+                <h3>Data Analyst</h3>
+                <div class="item-sub">Crusade Technologies | Austin, TX</div>
+              </div>
+              <div class="item-meta">Dec 2024 – Present</div>
+            </div>
+            <ul class="bullets">
+              <li>Extract, manipulate, and analyze data from multiple primary and secondary sources using SQL, Power BI, and ETL tools to support business reporting and operational decision-making.</li>
+              <li>Develop interactive dashboards and user-friendly visualizations in Power BI to communicate trends, KPIs, and operational performance metrics, improving reporting efficiency by 30%.</li>
+              <li>Conduct statistical and trend analysis on large datasets to identify business patterns and deliver actionable recommendations for leadership decision-making.</li>
+              <li>Produce recurring and ad hoc reports for stakeholders, ensuring timely delivery of high-quality analytical insights across multiple projects and deadlines.</li>
+              <li>Perform data cleaning, validation, and transformation using Power Query, SQL, and Python, improving data quality and reporting accuracy by 25%.</li>
+              <li>Optimize SQL queries, stored procedures, and functions to improve data retrieval speed and reporting performance by 30%.</li>
+              <li>Document reporting methodologies, data definitions, validation procedures, and workflow processes to improve transparency and maintain reporting consistency.</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="item-head">
+              <div>
+                <h3>Data Analyst</h3>
+                <div class="item-sub">Amazon Development Centre of India Pvt. Ltd.</div>
+              </div>
+              <div class="item-meta">Jun 2020 – Jul 2023</div>
+            </div>
+            <ul class="bullets">
+              <li>Extracted and analyzed operational data using advanced SQL queries to support reporting, performance tracking, and strategic business initiatives across logistics operations.</li>
+              <li>Designed and maintained dashboards and performance reports to track KPIs, operational efficiency, delivery metrics, and quality benchmarks.</li>
+              <li>Conducted root cause and trend analysis on operational datasets to identify inefficiencies and recommend process improvements that enhanced performance benchmarks by 10%.</li>
+              <li>Managed recurring and ad hoc reporting requests from multiple stakeholders while ensuring timely and accurate delivery under strict deadlines.</li>
+              <li>Developed data validation frameworks and audit processes to improve dataset reliability and ensure reporting accuracy across business units.</li>
+              <li>Automated data ingestion and reporting workflows using Jenkins CI/CD and Amazon Redshift, reducing operational costs by 20%.</li>
+              <li>Maintained detailed documentation of data processes, validation procedures, and reporting standards to ensure consistency and transparency across analytical workflows.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="card">
+          <h2>Project</h2>
+          <article class="item">
+            <div class="item-head">
+              <div>
+                <h3>Reducing Customer Churn for a Subscription-Based Company</h3>
+              </div>
+            </div>
+            <ul class="bullets">
+              <li>Built an end-to-end customer churn analysis pipeline using SQL and Python to identify churn drivers across customer subscription and usage data.</li>
+              <li>Conducted exploratory data analysis and statistical evaluation to identify significant churn indicators and behavioral trends.</li>
+              <li>Developed predictive models using Random Forest classification and regression analysis to forecast churn probability and support targeted retention strategies.</li>
+              <li>Created interactive dashboards in Tableau and Power BI to visualize churn trends, segmentation, and business performance insights.</li>
+              <li>Delivered actionable recommendations based on quantitative findings to improve retention and optimize customer engagement strategies.</li>
+            </ul>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <p class="footer-note">Resume website updated from the uploaded resume content.</p>
   </div>
-</section>
-
-<!-- WORK EXPERIENCE -->
-<section id="experience">
-  <h2>Work Experience</h2>
-
-  <div class="card">
-    <h3>KPMG – Senior Data Analyst</h3>
-    <p><i>Jan 2025 – Present | Austin, TX</i></p>
-    <ul>
-      <li>Performed credit risk analysis and data quality validation for financial datasets.</li>
-      <li>Developed Tableau dashboards to monitor portfolio performance and KPIs.</li>
-      <li>Wrote complex SQL queries (joins, CTEs) for data transformation and reporting.</li>
-      <li>Conducted statistical analysis (ANOVA, regression) using Python and R.</li>
-      <li>Built ETL pipelines using SSIS and automated workflows.</li>
-      <li>Improved inventory planning efficiency by 15% through analytical reporting.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Concentrix – Data Analyst</h3>
-    <p><i>Sep 2024 – Dec 2024 | GA</i></p>
-    <ul>
-      <li>Built real-time dashboards to analyze customer behavior and engagement.</li>
-      <li>Performed cohort analysis, segmentation, and A/B testing.</li>
-      <li>Worked on Snowflake + AWS integration for data pipelines.</li>
-      <li>Supported data governance initiatives including data classification and validation.</li>
-      <li>Used Spark and Hive for large-scale data analysis.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Amazon – Data Analyst</h3>
-    <p><i>July 2019 – July 2023 | India</i></p>
-    <ul>
-      <li>Analyzed user behavior to improve retention and product performance.</li>
-      <li>Developed dashboards and KPIs using Tableau.</li>
-      <li>Designed ETL pipelines using AWS Glue and Python.</li>
-      <li>Performed data validation, governance, and metadata documentation.</li>
-      <li>Optimized SQL queries for large-scale datasets.</li>
-    </ul>
-  </div>
-
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-  <h2>Technical Skills</h2>
-  <div class="skills">
-    <div class="skill">SQL</div>
-    <div class="skill">Python</div>
-    <div class="skill">R</div>
-    <div class="skill">Tableau</div>
-    <div class="skill">Power BI</div>
-    <div class="skill">AWS</div>
-    <div class="skill">Snowflake</div>
-    <div class="skill">Databricks</div>
-    <div class="skill">Airflow</div>
-    <div class="skill">Spark</div>
-    <div class="skill">Data Governance</div>
-    <div class="skill">Collibra</div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <h2>Projects</h2>
-
-  <div class="card">
-    <h3>Credit Risk Analytics Dashboard</h3>
-    <p>Built Tableau dashboards to analyze financial risk and KPIs.</p>
-  </div>
-
-  <div class="card">
-    <h3>Customer Churn Analysis</h3>
-    <p>Used Python and SQL to identify churn patterns and improve retention.</p>
-  </div>
-
-  <div class="card">
-    <h3>ETL Pipeline Automation</h3>
-    <p>Developed AWS-based ETL pipelines for scalable data processing.</p>
-  </div>
-
-</section>
-
-<!-- CERTIFICATIONS -->
-<section id="certifications">
-  <h2>Certifications</h2>
-
-  <div class="card">
-    <ul>
-      <li>Microsoft Power BI Certification</li>
-      <li>Python for Data Science</li>
-      <li>AWS Data Analytics Certification</li>
-    </ul>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: abhinavchandrakatha@example.com</p>
-  <p>LinkedIn: https://www.linkedin.com/in/abhinav-chandra-189b35353</p>
-</section>
-
-<footer>
-  <p>© 2026 Abhinav Chandra</p>
-</footer>
-
 </body>
 </html>
